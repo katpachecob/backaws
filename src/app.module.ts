@@ -7,6 +7,7 @@ import { TypeOrmModule } from '@nestjs/typeorm';
 import { User } from './users/entities/user.entity';
 import { AuthModule } from './auth/auth.module';
 import { TaskModule } from './task/task.module';
+import { Task } from './task/entity/task.entity';
 
 @Global()
 @Module({
@@ -22,7 +23,7 @@ import { TaskModule } from './task/task.module';
       username: process.env.DB_USER,
       password: process.env.DB_PASSWORD,
       database: process.env.DB_NAME,
-      entities: [User],
+      entities: [User, Task],
       synchronize: true,
     }),
     UsersModule,
