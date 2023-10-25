@@ -10,7 +10,7 @@ async function bootstrap() {
       "http://localhost:3000",
       "https://localhost:3000",
     ],
-    methods: ["GET", "POST", "PATCH"],
+    methods: ["GET", "POST", "PATCH","PUT"],
     credentials: true,
   })
   app.setGlobalPrefix('api/v1')

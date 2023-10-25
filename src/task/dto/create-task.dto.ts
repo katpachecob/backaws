@@ -12,8 +12,4 @@ export class CreateTaskDto {
     @IsBoolean()
     @IsOptional()
     status?: boolean
-
-
-  @IsOptional()
-  list?: number;
 }
