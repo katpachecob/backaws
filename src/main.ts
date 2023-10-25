@@ -9,18 +9,11 @@ async function bootstrap() {
     rejectUnauthorized: false
   })
   app.enableCors({
-    allowedHeaders: ['content-type'],
-    origin: [
-      "http://localhost:3000",
-      "https://localhost:3000",
-      "https://front-devacas.vercel.app",
-      "http://front-devacas.vercel.app",
-      "https://front-devacas-git-main-katpachecob.vercel.app",
-      "https://front-devacas-26e67tv5f-katpachecob.vercel.app"
-
-    ],
+    allowedHeaders: ['Content-Type, Authorization'],
+    preflightContinue: false,
+    origin:'*',
     methods: ["GET", "POST", "PATCH", "PUT"],
-    // credentials: true,
+    credentials: true,
   })
 
   app.setGlobalPrefix('api/v1')
