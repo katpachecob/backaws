@@ -11,8 +11,8 @@ async function bootstrap() {
   app.enableCors({
     allowedHeaders: ['content-type'],
     origin: [
-      "http://localhost:3000",
-      "https://localhost:3000",
+      // "http://localhost:3000",
+      // "https://localhost:3000",
       "https://front-devacas.vercel.app",
       "http://front-devacas.vercel.app",
       "https://front-devacas-git-main-katpachecob.vercel.app",
