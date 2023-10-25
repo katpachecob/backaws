@@ -5,12 +5,14 @@ import { AppModule } from './app.module';
 async function bootstrap() {
   const app = await NestFactory.create(AppModule, { cors: true });
   app.enableCors({
-    allowedHeaders:['content-type'],
+    allowedHeaders: ['content-type'],
     origin: [
       "http://localhost:3000",
       "https://localhost:3000",
+      "https://front-devacas.vercel.app",
+      "http://front-devacas.vercel.app"
     ],
-    methods: ["GET", "POST", "PATCH","PUT"],
+    methods: ["GET", "POST", "PATCH", "PUT"],
     credentials: true,
   })
   app.setGlobalPrefix('api/v1')
