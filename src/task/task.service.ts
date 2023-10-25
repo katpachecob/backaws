@@ -14,7 +14,7 @@ export class TasksService {
     constructor(
         @InjectRepository(Task)
         private readonly taskService: Repository<Task>,
-  
+
     ) { }
 
     findAll() {
@@ -27,12 +27,12 @@ export class TasksService {
 
     async create(createTaskDto: CreateTaskDto) {
         return await this.taskService.save(createTaskDto);
-      }
+    }
     async deleteByID(id: string) {
         return this.taskService.delete(id)
     }
 
-    async update(id:number, newInfoTask: UpdateTaskDto) {
+    async update(id: number, newInfoTask: UpdateTaskDto) {
         return await this.taskService.update(id, newInfoTask)
     }
 
@@ -40,4 +40,5 @@ export class TasksService {
         const listSearch = await searchList(searchInfo)
         return listSearch
     }
+
 }

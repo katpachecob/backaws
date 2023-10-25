@@ -12,7 +12,4 @@ export declare class TasksService {
     deleteByID(id: string): Promise<import("typeorm").DeleteResult>;
     update(id: number, newInfoTask: UpdateTaskDto): Promise<import("typeorm").UpdateResult>;
     searchByCountry(searchInfo: FindCountryDto): Promise<import("openai/resources").CompletionChoice[]>;
-    getTasksByUser({ userId }: {
-        userId: any;
-    }): Promise<Task[]>;
 }

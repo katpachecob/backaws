@@ -41,14 +41,6 @@ let TasksService = class TasksService {
         const listSearch = await (0, open_ai_1.default)(searchInfo);
         return listSearch;
     }
-    async getTasksByUser({ userId }) {
-        console.log(userId);
-        return await this.taskService.find({
-            where: {
-                userId: userId
-            }
-        });
-    }
 };
 exports.TasksService = TasksService;
 exports.TasksService = TasksService = __decorate([
