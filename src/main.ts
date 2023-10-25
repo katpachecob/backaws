@@ -19,7 +19,7 @@ async function bootstrap() {
       "https://front-devacas-26e67tv5f-katpachecob.vercel.app"
 
     ],
-    methods: ["GET", "POST", "PATCH", "PUT","OPTIONS", "HEAD", "DELETE"],
+    methods: ["GET", "POST", "PATCH", "PUT", "DELETE"],
     credentials: true,
   })
 
