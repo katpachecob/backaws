@@ -11,5 +11,5 @@ export class UpdateTaskDto {
 
     @IsBoolean()
     @IsOptional()
-    done?: boolean
+    status?: boolean
 }
