@@ -1,4 +1,4 @@
-import { Controller, Get, Post, Delete, Body, Param, NotFoundException, HttpCode, Put } from '@nestjs/common';
+import { Controller, Get, Post, Delete, Body, Param, NotFoundException, HttpCode, Put, Patch } from '@nestjs/common';
 import { CreateTaskDto } from './dto/create-task.dto';
 import { UpdateTaskDto } from './dto/update-task.dto';
 import { TasksService } from './task.service';
@@ -35,9 +35,9 @@ export class TasksController {
         return deleteTask
     }
 
-    @Put(':id')
+    @Patch(':id')
     @HttpCode(203)
-    async updateByID(@Param('id') id: string, @Body() body: UpdateTaskDto) {
+    async update(@Param('id') id: number, @Body() body: UpdateTaskDto) {
         try {
             const editTask = await this.taskController.update(id, body)
             if (!editTask) throw new NotFoundException('Task does not exist')

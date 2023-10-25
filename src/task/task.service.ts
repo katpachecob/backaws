@@ -32,8 +32,8 @@ export class TasksService {
         return this.taskService.delete(id)
     }
 
-    async update(id: string, newInfoTask: UpdateTaskDto) {
-        return this.taskService.update(id, newInfoTask)
+    async update(id:number, newInfoTask: UpdateTaskDto) {
+        return await this.taskService.update(id, newInfoTask)
     }
 
     async searchByCountry(searchInfo: FindCountryDto) {
