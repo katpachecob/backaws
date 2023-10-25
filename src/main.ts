@@ -13,7 +13,7 @@ async function bootstrap() {
       "http://front-devacas.vercel.app"
     ],
     methods: ["GET", "POST", "PATCH", "PUT"],
-    credentials: true,
+    // credentials: true,
   })
   app.setGlobalPrefix('api/v1')
   app.useGlobalPipes(
