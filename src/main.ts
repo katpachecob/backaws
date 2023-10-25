@@ -17,11 +17,11 @@ async function bootstrap() {
   })
 
   app.setGlobalPrefix('api/v1')
-  app.useGlobalPipes(
-    new ValidationPipe({
-      whitelist: true
-    })
-  )
+  // app.useGlobalPipes(
+  //   new ValidationPipe({
+  //     whitelist: true
+  //   })
+  // )
   await app.listen(8000, () => console.log(`Running in port 8000`));
 }
 bootstrap();
