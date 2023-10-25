@@ -9,7 +9,7 @@ import { JwtService } from '@nestjs/jwt';
 import * as bcrypt from 'bcrypt';
 
 import { CreateUserDto } from 'src/users/dto/create-user.dto';
-import { ForgotUserDto } from 'src/users/dto/forgotpassword-user';
+
 import { LoginUserDto } from 'src/users/dto/login-user';
 import { UserService } from 'src/users/user.service';
 
@@ -65,18 +65,6 @@ export class AuthService {
         token,
         email,
       };
-    }
-    catch (error) {
-      throw new InternalServerErrorException(error)
-    }
-  }
-
-  async forgotPassword({ email }: ForgotUserDto) {
-    try {
-      const user = await this.usersService.findByEmailWithPassword(email);
-      if (!user) {
-        throw new UnauthorizedException('No user was found');
-      }
     }
     catch (error) {
       throw new InternalServerErrorException(error)
