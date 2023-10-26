@@ -27,6 +27,6 @@ async function bootstrap() {
       whitelist: true
     })
   )
-  await app.listen(8000, () => console.log(`Running in port 8000`));
+  await app.listen(parseInt(process.env.PORT), () => console.log(`Running in port ${process.env.PORT}`));
 }
 bootstrap();
